@@ -20,13 +20,13 @@ public class Main {
             }
 
             // 0. pdf를 hex로 읽고 출력하기
-            ConvertPdfToHex(originFilePath);
+//            ConvertPdfToHex(originFilePath);
 
             // 1. 바이너리 파일을 hex 형태로 읽기
             String hex = readBinaryFileToHex(file);
 
             // 2. hex 문자열을 텍스트 파일로 쓰기 (확인용)
-            writeTextFile(hexFilePath, hex);
+//            writeTextFile(hexFilePath, hex);
 
             // 3. hex 문자열을 binaryFile로 만들기
             writeBinaryFileFromHex(destFilePath, hex);
@@ -135,6 +135,7 @@ public class Main {
             close(fileInputStream);
         }
 
+        System.out.println(hexBuff);
         return hexBuff.toString();
     }
 
